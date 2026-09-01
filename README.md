@@ -47,6 +47,6 @@ bun run dev
 Set .env: RAZORPAY_KEY_ID=rzp_test_xxx, RAZORPAY_KEY_SECRET=xxx
 
 ### Pitch Video
-[Add your 5-min video link here after upload]
+[https://youtu.be/YmNYIHyB8e8?si=PkX7SXpnQ2AmJBUl]
 
 Built by Mahima - Coastal resilience enthusiast from Puducherry.
