@@ -1,0 +1,6 @@
+{
+  "name": "Geo Bharat - Interactive India Map",
+  "description": "Explore all Indian states & union territories with capitals, famous foods, languages, fun facts, and tricolor confetti animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
