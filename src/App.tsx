@@ -14,6 +14,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [isListOpen, setIsListOpen] = useState(false);
+  const [pincode, setPincode] = useState('');
 
   const filteredStates = useMemo(() => {
     let data = selectedRegion === 'All' ? ALL_STATES_DATA : ALL_STATES_DATA.filter(s => s.region === selectedRegion);
@@ -30,49 +31,83 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col">
       
-      <div style={{background:'linear-gradient(135deg,#0f172a,#1e3a8a)',color:'white',padding:'22px 16px',textAlign:'center'}}>
-        <h1 style={{fontSize:'28px',fontWeight:800}}>🌍 Geo Bharat - வரும் முன் காப்போம்</h1>
-        <p style={{marginTop:'8px',fontSize:'12px',opacity:0.95,lineHeight:'1.5'}}>India 1950-2024: 325 Floods | 923M Affected | 81K Deaths | Global: 1.81B (23%) at Risk $388B | LIVE Bhotekoshi M5.2 GLOF Aug 26 2026: 1114 Deaths | The Hindu Sep 2 2026 Chain</p>
-        <div style={{display:'flex',gap:'8px',justifyContent:'center',flexWrap:'wrap',marginTop:'14px'}}>
-          <span style={{background:'#059669',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>🌍 1.81B at Risk</span>
-          <span style={{background:'#dc2626',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>🚨 GLOF 15m @167km/h</span>
-          <span style={{background:'#7c3aed',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>📰 The Hindu Verified</span>
+      {/* MERGED HEADER - Local Hub + Flood */}
+      <div style={{background:'linear-gradient(135deg,#0f172a,#1e3a8a)',color:'white',padding:'24px 16px',textAlign:'center',position:'relative',overflow:'hidden'}}>
+        <div style={{position:'absolute',inset:0,opacity:0.15,backgroundImage:'url(https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg)',backgroundSize:'cover'}}></div>
+        <div style={{position:'relative'}}>
+          <h1 style={{fontSize:'26px',fontWeight:900}}>Geo Bharat: Your Local Information Hub</h1>
+          <p style={{marginTop:'6px',fontSize:'12px',opacity:0.9}}>Connecting you to essential local information with ease + Flood Chain Alert System</p>
+          <p style={{marginTop:'10px',fontSize:'11px',background:'rgba(255,255,255,0.15)',display:'inline-block',padding:'4px 12px',borderRadius:'20px'}}>Use 302020 pincode | India 325 Floods | Global 1.81B Risk | LIVE Bhotekoshi GLOF 1114 Deaths</p>
+          
+          <div style={{marginTop:'16px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto',background:'white',borderRadius:'12px',display:'flex',padding:'6px'}}>
+            <input value={pincode} onChange={e=>setPincode(e.target.value)} placeholder="Enter Your Pincode for Hyperlocal Information" style={{flex:1,border:'none',outline:'none',padding:'10px 14px',fontSize:'13px',color:'#111'}} />
+            <button style={{background:'#1e40af',color:'white',padding:'8px 16px',borderRadius:'8px',border:'none',fontWeight:700}}>📍 🔍</button>
+          </div>
+
+          <div style={{display:'flex',gap:'8px',justifyContent:'center',flexWrap:'wrap',marginTop:'16px'}}>
+            <span style={{background:'#f9a8d4',color:'#111',padding:'8px 12px',borderRadius:'10px',fontSize:'11px',textAlign:'left'}}><b>1.Instant Access</b><br/>Get immediate access to details specific to your location.</span>
+            <span style={{background:'#f9a8d4',color:'#111',padding:'8px 12px',borderRadius:'10px',fontSize:'11px',textAlign:'left'}}><b>2.Comprehensive Data</b><br/>Find contacts and information for essential services in your area.</span>
+            <span style={{background:'#f9a8d4',color:'#111',padding:'8px 12px',borderRadius:'10px',fontSize:'11px',textAlign:'left'}}><b>3.User-Friendly</b><br/>Simple and intuitive interface for a seamless experience.</span>
+          </div>
+
+          <div style={{display:'flex',gap:'8px',justifyContent:'center',flexWrap:'wrap',marginTop:'12px'}}>
+            <a href="https://www.worldbank.org/en/topic/water" target="_blank" rel="noreferrer" style={{background:'#059669',padding:'7px 14px',borderRadius:'20px',fontSize:'11px',color:'white',textDecoration:'none',fontWeight:700}}>🌍 WorldBank 1.81B ↗</a>
+            <a href="https://en.wikipedia.org/wiki/Glacial_lake_outburst_flood" target="_blank" rel="noreferrer" style={{background:'#2563eb',padding:'7px 14px',borderRadius:'20px',fontSize:'11px',color:'white',textDecoration:'none',fontWeight:700}}>🚨 GLOF Wiki ↗</a>
+            <a href="https://education.nationalgeographic.org/resource/flood/" target="_blank" rel="noreferrer" style={{background:'#ea580c',padding:'7px 14px',borderRadius:'20px',fontSize:'11px',color:'white',textDecoration:'none',fontWeight:700}}>📚 NatGeo ↗</a>
+          </div>
         </div>
       </div>
 
-      <div style={{background:'white',margin:'12px',borderRadius:'16px',border:'3px solid #7f1d1d',overflow:'hidden',boxShadow:'0 4px 20px rgba(0,0,0,0.1)'}}>
-        <div style={{background:'#7f1d1d',color:'white',padding:'12px 16px',fontSize:'13px',fontWeight:800}}>
-          📰 THE HINDU - WEDNESDAY SEP 2 2026 - MADURAI EDITION
-          <div style={{fontSize:'11px',fontWeight:400,marginTop:'4px',opacity:0.9}}>By M. Jawahar | MUD AND WATER NO MATTER BUT HATERS OF NATURE ARE | INDIA'S CLIMATE CHAIN: FROM SUN TO FLOOD</div>
+      {/* QUICK ACCESS - OLD IDEA */}
+      <div style={{background:'#6366f1',padding:'20px 12px'}}>
+        <div style={{background:'white',borderRadius:'16px',padding:'20px',maxWidth:'900px',margin:'0 auto'}}>
+          <h2 style={{fontSize:'18px',fontWeight:800}}>Quick Access: Essential Services in Your Area</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'16px',marginTop:'16px',fontSize:'12px'}}>
+            <div><div style={{fontSize:'24px'}}>🏥</div><b>Government & Administration</b><br/>Find nearby medical facilities and emergency contacts.</div>
+            <div><div style={{fontSize:'24px'}}>🏛️</div><b>Civic Services</b><br/>Access local police station information and contact numbers.</div>
+            <div><div style={{fontSize:'24px'}}>⚡</div><b>Others</b><br/>Get details for electricity and water board services.</div>
+          </div>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginTop:'16px',fontSize:'12px',borderTop:'1px solid #eee',paddingTop:'16px'}}>
+            <div>⛽ <b>3. Gas Supply</b><br/>Information about gas suppliers and emergency contacts.</div>
+            <div>🗑️ <b>4. Waste Management</b><br/>Find details about waste collection and disposal services.</div>
+          </div>
         </div>
-        <div style={{padding:'16px',fontSize:'13px',lineHeight:'1.8',color:'#1f2937'}}>
-          <p>It does NOT start in mountains. It starts 7 crore sq.km away in Indian Ocean, under noon sun. Ocean heats to <b>28-30°C</b>, evaporates, vapour rises, wind born. Monsoon travels west to east, meets <b>150-million-year-old Western Ghats</b> → West gets <b>3000-4000mm</b> rain (Western Feast), 50km East drought. Dry hot wind goes North to Himalaya → heats glaciers → glacial lake forms → dam breaks → <b>15m wall @167km/h</b> → Bhotekoshi Nepal (M5.2 triggered) to Bihar → 3000+ lives lost. <b>Chain: Sun → Ocean → Vapour → Ghats → Drought → Himalaya → GLOF → Flood.</b></p>
-          
-          <div style={{background:'#fef2f2',border:'2px dashed #fca5a5',padding:'12px',borderRadius:'12px',marginTop:'14px'}}>
-            <b style={{display:'block',textAlign:'center',color:'#991b1b',fontSize:'12px'}}>👇 NEWSPAPER PROOF - Upload Tomorrow to /public 👇</b>
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginTop:'10px'}}>
-              <div style={{textAlign:'center'}}>
-                <div style={{width:'100%',minHeight:'200px',background:'#f3f4f6',borderRadius:'8px',border:'2px solid #000',display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-                  <img src="/hindu-english.jpg" alt="Hindu English" style={{width:'100%',height:'100%',objectFit:'contain'}} onError={(e)=>{e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'}} />
-                  <span style={{display:'none',fontSize:'11px',padding:'20px'}}>Tomorrow upload: hindu-english.jpg</span>
-                </div>
-                <p style={{fontSize:'10px',marginTop:'6px',fontWeight:700}}>English - MUD AND WATER...</p>
-              </div>
-              <div style={{textAlign:'center'}}>
-                <div style={{width:'100%',minHeight:'200px',background:'#f3f4f6',borderRadius:'8px',border:'2px solid #000',display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
-                  <img src="/hindu-tamil.jpg" alt="Hindu Tamil" style={{width:'100%',height:'100%',objectFit:'contain'}} onError={(e)=>{e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'}} />
-                  <span style={{display:'none',fontSize:'11px',padding:'20px'}}>Tomorrow upload: hindu-tamil.jpg</span>
-                </div>
-                <p style={{fontSize:'10px',marginTop:'6px',fontWeight:700}}>Tamil - சேறும் தண்ணீரும்...</p>
-              </div>
-            </div>
-          </div>
+      </div>
 
-          <div style={{background:'#0f172a',color:'white',padding:'12px',borderRadius:'10px',marginTop:'14px',textAlign:'center'}}>
-            <b style={{fontSize:'13px'}}>💬 "Mud and water no matter but haters of nature are"</b>
-            <div style={{fontSize:'11px',marginTop:'6px',opacity:0.9}}>Solution: ICIMOD (glacier watch) + IMD (rain) + Gemini AI (alert) + Razorpay (pay BEFORE) + Google Maps (safe route) = <b>வரும் முன் காப்போம்</b></div>
+      {/* THE HINDU + NEWSPAPER PROOF - NEW IDEA */}
+      <div style={{background:'white',margin:'12px',borderRadius:'16px',border:'3px solid #7f1d1d',overflow:'hidden'}}>
+        <div style={{background:'#7f1d1d',color:'white',padding:'10px 16px',fontSize:'13px',fontWeight:800}}>📰 THE HINDU - WED SEP 2 2026 - MUD AND WATER NO MATTER BUT HATERS OF NATURE ARE | By M. Jawahar</div>
+        <div style={{padding:'14px 16px',fontSize:'13px',lineHeight:'1.7'}}>
+          <p><b>INDIA'S CLIMATE CHAIN: FROM SUN TO FLOOD</b><br/>Sun heats Ocean 28-30°C → Vapour → Monsoon → 150M yr Western Ghats → West 3000-4000mm Feast / East drought → Dry wind North → Himalaya glaciers melt → Lake breaks → <b>15m wall @167km/h</b> → Bhotekoshi M5.2 to Bihar 1114 deaths. Fix: ICIMOD+IMD+Gemini+Razorpay BEFORE+Google Maps = வரும் முன் காப்போம்</p>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginTop:'10px'}}>
+            <img src="/hindu-english.jpg" alt="English" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
+            <img src="/hindu-tamil.jpg" alt="Tamil" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
           </div>
-          <p style={{marginTop:'10px',fontSize:'10px',color:'#6b7280',textAlign:'center'}}>Sources: NDMA 325 floods, World Bank 1.81B risk 89% low-income $388B, NatGeo 90% disasters, Kaziranga 2012 rhinos / 2024 200 animals, Great Barrier Reef 2019 pollution.</p>
+          <div style={{background:'#0f172a',color:'white',padding:'10px',borderRadius:'8px',marginTop:'12px',textAlign:'center',fontSize:'12px'}}><b>💬 "Mud and water no matter but haters of nature are"</b> - Integrated with Pincode Services!</div>
+        </div>
+      </div>
+
+      {/* LIVE GOOGLE MAP - NEW IDEA */}
+      <div style={{background:'white',margin:'0 12px 12px 12px',borderRadius:'16px',border:'3px solid #1e40af',overflow:'hidden'}}>
+        <div style={{background:'#1e40af',color:'white',padding:'10px 16px',fontSize:'13px',fontWeight:800}}>🗺️ LIVE GOOGLE MAP - Bhotekoshi GLOF Route Nepal → Bihar | Hyperlocal + Flood Alert Merged</div>
+        <iframe src="https://www.google.com/maps?q=Bhotekoshi%20River%20Nepal&z=7&output=embed" width="100%" height="400" style={{border:0}} allowFullScreen loading="lazy" title="Live Map"></iframe>
+        <div style={{padding:'10px',background:'#eff6ff',fontSize:'11px',display:'flex',gap:'6px',flexWrap:'wrap',justifyContent:'center'}}>
+          <span style={{background:'#dc2626',color:'white',padding:'5px 10px',borderRadius:'12px'}}>🔴 Bhotekoshi Origin</span>
+          <span style={{background:'#1e40af',color:'white',padding:'5px 10px',borderRadius:'12px'}}>🔵 Bihar Flood 1114 Deaths + Your Pincode Area</span>
+        </div>
+      </div>
+
+      {/* BREAKING NEWS - OLD IDEA */}
+      <div style={{background:'white',padding:'20px',textAlign:'center',margin:'0 12px 12px 12px',borderRadius:'16px',border:'1px solid #e2e8f0'}}>
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400" alt="Breaking" style={{width:'200px',borderRadius:'8px',margin:'0 auto'}} />
+        <h3 style={{fontSize:'18px',fontWeight:800,marginTop:'12px',color:'#1e3a8a'}}>Latest Local News and Updates -</h3>
+        <div style={{marginTop:'12px',background:'#dbeafe',display:'inline-block',padding:'6px 12px',borderRadius:'8px',fontSize:'12px'}}><b>1. Breaking News</b><br/>Stay updated with real-time local news + Flood alerts</div>
+      </div>
+
+      <div style={{background:'#6366f1',padding:'20px 12px'}}>
+        <div style={{background:'white',borderRadius:'16px',padding:'20px',maxWidth:'700px',margin:'0 auto'}}>
+          <h2 style={{fontSize:'20px',fontWeight:900}}>About Geo Bharat: Connecting You to Your Community</h2>
+          <p style={{fontSize:'12px',marginTop:'8px',lineHeight:'1.6'}}>Geo Bharat aims to bridge the information gap, empowering citizens with easy access to essential local details. We strive to connect you to your community, making civic engagement simple and seamless. Now with <b>Flood Chain Early Warning + Razorpay BEFORE payment + Google Maps safe route</b>. Our mission is to build a more informed and connected Bharat, one pincode at a time. <b>வரும் முன் காப்போம்</b></p>
         </div>
       </div>
 
