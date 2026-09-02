@@ -30,52 +30,49 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col">
       
-      <div style={{background:'linear-gradient(135deg,#0f172a,#1e3a8a)',color:'white',padding:'20px 16px',textAlign:'center'}}>
-        <h1 style={{fontSize:'26px',fontWeight:800}}>🌍 Geo Bharat - வரும் முன் காப்போம்</h1>
-        <p style={{marginTop:'6px',fontSize:'11px',opacity:0.9,lineHeight:'1.4'}}>India 1950-2024: 325 Floods, 923M Affected, 81K Deaths | Global 1.81B (23%) at Risk $388B | LIVE Nepal Bhotekoshi M5.2 GLOF Aug 26 2026: 1114 Deaths</p>
-        <div style={{display:'flex',gap:'6px',justifyContent:'center',flexWrap:'wrap',marginTop:'10px'}}>
-          <a href="https://ndma.gov.in" target="_blank" rel="noreferrer" style={{background:'#dc2626',padding:'6px 12px',borderRadius:'20px',fontSize:'10px',color:'white',textDecoration:'none',fontWeight:700}}>🇮🇳 NDMA 325 ↗</a>
-          <a href="https://www.worldbank.org/en/topic/water" target="_blank" rel="noreferrer" style={{background:'#059669',padding:'6px 12px',borderRadius:'20px',fontSize:'10px',color:'white',textDecoration:'none',fontWeight:700}}>🌍 WorldBank 1.81B ↗</a>
-          <a href="https://en.wikipedia.org/wiki/Glacial_lake_outburst_flood" target="_blank" rel="noreferrer" style={{background:'#2563eb',padding:'6px 12px',borderRadius:'20px',fontSize:'10px',color:'white',textDecoration:'none',fontWeight:700}}>🚨 GLOF Wiki ↗</a>
-          <a href="https://education.nationalgeographic.org/resource/flood/" target="_blank" rel="noreferrer" style={{background:'#ea580c',padding:'6px 12px',borderRadius:'20px',fontSize:'10px',color:'white',textDecoration:'none',fontWeight:700}}>📚 NatGeo ↗</a>
-          <a href="https://www.thehindu.com/tag/floods/" target="_blank" rel="noreferrer" style={{background:'#7c3aed',padding:'6px 12px',borderRadius:'20px',fontSize:'10px',color:'white',textDecoration:'none',fontWeight:700}}>📰 Hindu Floods ↗</a>
+      <div style={{background:'linear-gradient(135deg,#0f172a,#1e3a8a)',color:'white',padding:'22px 16px',textAlign:'center'}}>
+        <h1 style={{fontSize:'28px',fontWeight:800}}>🌍 Geo Bharat - வரும் முன் காப்போம்</h1>
+        <p style={{marginTop:'8px',fontSize:'12px',opacity:0.95,lineHeight:'1.5'}}>India 1950-2024: 325 Floods | 923M Affected | 81K Deaths | Global: 1.81B (23%) at Risk $388B | LIVE Bhotekoshi M5.2 GLOF Aug 26 2026: 1114 Deaths | The Hindu Sep 2 2026 Chain</p>
+        <div style={{display:'flex',gap:'8px',justifyContent:'center',flexWrap:'wrap',marginTop:'14px'}}>
+          <span style={{background:'#059669',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>🌍 1.81B at Risk</span>
+          <span style={{background:'#dc2626',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>🚨 GLOF 15m @167km/h</span>
+          <span style={{background:'#7c3aed',padding:'8px 14px',borderRadius:'20px',fontSize:'11px',color:'white',fontWeight:700}}>📰 The Hindu Verified</span>
         </div>
       </div>
 
-      <div style={{background:'white',margin:'12px',borderRadius:'16px',border:'3px solid #7f1d1d',overflow:'hidden'}}>
-        <div style={{background:'#7f1d1d',color:'white',padding:'10px 16px',fontSize:'13px',fontWeight:800,display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:'6px'}}>
-          <span>📰 THE HINDU - WED SEP 2 2026 - MUD AND WATER NO MATTER BUT HATERS OF NATURE ARE</span>
-          <span style={{background:'white',color:'#7f1d1d',padding:'2px 8px',borderRadius:'10px',fontSize:'10px'}}>Madurai Edition | By M. Jawahar</span>
+      <div style={{background:'white',margin:'12px',borderRadius:'16px',border:'3px solid #7f1d1d',overflow:'hidden',boxShadow:'0 4px 20px rgba(0,0,0,0.1)'}}>
+        <div style={{background:'#7f1d1d',color:'white',padding:'12px 16px',fontSize:'13px',fontWeight:800}}>
+          📰 THE HINDU - WEDNESDAY SEP 2 2026 - MADURAI EDITION
+          <div style={{fontSize:'11px',fontWeight:400,marginTop:'4px',opacity:0.9}}>By M. Jawahar | MUD AND WATER NO MATTER BUT HATERS OF NATURE ARE | INDIA'S CLIMATE CHAIN: FROM SUN TO FLOOD</div>
         </div>
-        <div style={{padding:'14px 16px',fontSize:'13px',lineHeight:'1.7',color:'#1f2937'}}>
-          <b>INDIA'S CLIMATE CHAIN: FROM SUN TO FLOOD</b>
-          <p style={{marginTop:'8px'}}>It does NOT start in mountains. It starts 7 crore sq.km away in Indian Ocean, under noon sun. Surface warms to 28-30°C, evaporates, vapour rises, low pressure, wind born. Monsoon travels west to east, heavy with moisture, meets 150-million-year-old Western Ghats. Ghats force to climb, cool, squeeze 3000-4000mm rain on west (Western Feast). Same wind now dry, 50km east drought. Dry hot wind turns north, thousands km to Himalaya, heats glaciers, ice collapses, rock & soil left, temporary glacial lake forms, loose wall breaks → 15m wall @167km/h muddy flood → Bhotekoshi Nepal to Bihar, 3000+ lives. Nature moving extra heat sea to mountain.</p>
+        <div style={{padding:'16px',fontSize:'13px',lineHeight:'1.8',color:'#1f2937'}}>
+          <p>It does NOT start in mountains. It starts 7 crore sq.km away in Indian Ocean, under noon sun. Ocean heats to <b>28-30°C</b>, evaporates, vapour rises, wind born. Monsoon travels west to east, meets <b>150-million-year-old Western Ghats</b> → West gets <b>3000-4000mm</b> rain (Western Feast), 50km East drought. Dry hot wind goes North to Himalaya → heats glaciers → glacial lake forms → dam breaks → <b>15m wall @167km/h</b> → Bhotekoshi Nepal (M5.2 triggered) to Bihar → 3000+ lives lost. <b>Chain: Sun → Ocean → Vapour → Ghats → Drought → Himalaya → GLOF → Flood.</b></p>
           
-          <div style={{background:'#fef2f2',border:'1px dashed #fca5a5',padding:'12px',borderRadius:'10px',marginTop:'12px'}}>
-            <b style={{display:'block',textAlign:'center',color:'#991b1b'}}>👇 YOUR NEWSPAPER PROOF - The Hindu Sep 2 2026 👇</b>
-            <p style={{textAlign:'center',fontSize:'10px',color:'#6b7280',marginTop:'4px'}}>Upload your 2 photos to /public as hindu-english.jpg & hindu-tamil.jpg - they will auto appear below</p>
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginTop:'10px'}}>
+          <div style={{background:'#fef2f2',border:'2px dashed #fca5a5',padding:'12px',borderRadius:'12px',marginTop:'14px'}}>
+            <b style={{display:'block',textAlign:'center',color:'#991b1b',fontSize:'12px'}}>👇 NEWSPAPER PROOF - Upload Tomorrow to /public 👇</b>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginTop:'10px'}}>
               <div style={{textAlign:'center'}}>
-                <img src="/hindu-english.jpg" alt="The Hindu English Sep 2 2026" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'200px',background:'#eee',objectFit:'contain'}} />
-                <p style={{fontSize:'10px',marginTop:'4px',fontWeight:700}}>English: MUD AND WATER NO MATTER...</p>
+                <div style={{width:'100%',minHeight:'200px',background:'#f3f4f6',borderRadius:'8px',border:'2px solid #000',display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
+                  <img src="/hindu-english.jpg" alt="Hindu English" style={{width:'100%',height:'100%',objectFit:'contain'}} onError={(e)=>{e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'}} />
+                  <span style={{display:'none',fontSize:'11px',padding:'20px'}}>Tomorrow upload: hindu-english.jpg</span>
+                </div>
+                <p style={{fontSize:'10px',marginTop:'6px',fontWeight:700}}>English - MUD AND WATER...</p>
               </div>
               <div style={{textAlign:'center'}}>
-                <img src="/hindu-tamil.jpg" alt="The Hindu Tamil Sep 2 2026" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'200px',background:'#eee',objectFit:'contain'}} />
-                <p style={{fontSize:'10px',marginTop:'4px',fontWeight:700}}>Tamil: சேறும் தண்ணீரும் பொருட்டல்ல...</p>
+                <div style={{width:'100%',minHeight:'200px',background:'#f3f4f6',borderRadius:'8px',border:'2px solid #000',display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
+                  <img src="/hindu-tamil.jpg" alt="Hindu Tamil" style={{width:'100%',height:'100%',objectFit:'contain'}} onError={(e)=>{e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'}} />
+                  <span style={{display:'none',fontSize:'11px',padding:'20px'}}>Tomorrow upload: hindu-tamil.jpg</span>
+                </div>
+                <p style={{fontSize:'10px',marginTop:'6px',fontWeight:700}}>Tamil - சேறும் தண்ணீரும்...</p>
               </div>
-            </div>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'8px',marginTop:'12px',fontSize:'10px',textAlign:'center'}}>
-              <div style={{background:'#fee2e2',padding:'8px',borderRadius:'8px'}}><b>Coastal</b><br/>Michaung<br/>Sea overflow</div>
-              <div style={{background:'#fef3c7',padding:'8px',borderRadius:'8px'}}><b>Riverine</b><br/>Kosi 1987<br/>slow/rapid</div>
-              <div style={{background:'#dbeafe',padding:'8px',borderRadius:'8px'}}><b>Flash</b><br/>Bhotekoshi<br/>Most dangerous</div>
             </div>
           </div>
 
-          <div style={{background:'#0f172a',color:'white',padding:'10px',borderRadius:'8px',marginTop:'12px',textAlign:'center',fontSize:'12px'}}>
-            <b>💬 "Mud and water no matter but haters of nature are"</b><br/>
-            <span style={{fontSize:'11px',opacity:0.85}}>Fix: ICIMOD + IMD + Gemini AI alert + Razorpay BEFORE flood + Google Maps safe route = வரும் முன் காப்போம்!</span>
+          <div style={{background:'#0f172a',color:'white',padding:'12px',borderRadius:'10px',marginTop:'14px',textAlign:'center'}}>
+            <b style={{fontSize:'13px'}}>💬 "Mud and water no matter but haters of nature are"</b>
+            <div style={{fontSize:'11px',marginTop:'6px',opacity:0.9}}>Solution: ICIMOD (glacier watch) + IMD (rain) + Gemini AI (alert) + Razorpay (pay BEFORE) + Google Maps (safe route) = <b>வரும் முன் காப்போம்</b></div>
           </div>
-          <p style={{marginTop:'8px',fontSize:'10px',color:'#6b7280'}}>Sources: NDMA 325 floods 1950-2024, World Bank 1.81B at risk 89% low-income $388B loss, NatGeo 90% disasters, 2012 rhinos, 2024 Kaziranga 200 deaths, Great Barrier Reef 2019 pollution.</p>
+          <p style={{marginTop:'10px',fontSize:'10px',color:'#6b7280',textAlign:'center'}}>Sources: NDMA 325 floods, World Bank 1.81B risk 89% low-income $388B, NatGeo 90% disasters, Kaziranga 2012 rhinos / 2024 200 animals, Great Barrier Reef 2019 pollution.</p>
         </div>
       </div>
 
