@@ -93,8 +93,8 @@ export default function App() {
         <div style={{padding:'14px 16px',fontSize:'13px',lineHeight:'1.7'}}>
           <p><b>INDIA'S CLIMATE CHAIN: FROM SUN TO FLOOD</b><br/>Sun 28-30°C Ocean → Vapour → Monsoon → 150M yr Western Ghats → West 3000mm / East drought → Himalaya melt → Lake break → <b>15m wall @167km/h</b> → Bhotekoshi M5.2 to Bihar 1114 deaths. Fix: ICIMOD+IMD+Gemini+Razorpay BEFORE+Google Maps = வரும் முன் காப்போம்</p>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginTop:'10px'}}>
-            <img src="/Hindu English.jpg" alt="English" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
-            <img src="/Hindu Tamil.jpg" alt="Tamil" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
+            <img src="/hindu-english.jpg" alt="English" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
+            <img src="/hindu-tamil.jpg" alt="Tamil" style={{width:'100%',borderRadius:'8px',border:'2px solid #000',minHeight:'150px',background:'#eee',objectFit:'contain'}} />
           </div>
           <div style={{background:'#0f172a',color:'white',padding:'10px',borderRadius:'8px',marginTop:'12px',textAlign:'center',fontSize:'12px'}}><b>💬 "Mud and water no matter but haters of nature are"</b> - Pincode Live Connected!</div>
         </div>
